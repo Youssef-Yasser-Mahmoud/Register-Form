@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+form textarea, form label input,
+form label select {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgb(243, 244, 246);
+  border: none;
+  color: rgb(17, 24, 39);
+  outline: none;
+}
+
+form {
+  display: grid;
+  width: 80vw;
+  background-color: rgb(17, 24, 39);
+  color: rgb(243, 244, 246);
+  padding: 1rem;
+  margin: 4rem auto;
+  border-radius: 2rem;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  form {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+form p {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(167, 139, 250);
+  grid-column: 1/-1;
+}
+form label {
+  width: 100%;
+}
+form textarea {
+  height: 10rem;
+  grid-column: 1/-1;
+  resize: none;
+}
+form [type=submit] {
+  width: 30%;
+  color: rgb(17, 24, 39);
+  background-color: rgb(167, 139, 250);
+  margin: 1rem auto;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  transition-duration: 0.5s;
+  border: none;
+  grid-column: 1/-1;
+}
+form [type=submit]:hover {
+  background-color: rgba(167, 139, 250, 0.5);
+  color: rgb(243, 244, 246);
+}/*# sourceMappingURL=style.css.map */

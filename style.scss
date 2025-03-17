@@ -1,0 +1,74 @@
+@import "abstracts/variables";
+@import 'layout/grid';
+
+* {
+  box-sizing: border-box;
+}
+
+%style {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: $secondaryColor;
+  border: none;
+  color: $primaryColor;
+  outline: none;
+}
+
+form {
+  display: grid;
+  width: 80vw;
+  background-color: $primaryColor;
+  color: $secondaryColor;
+  padding: 1rem;
+  margin: 4rem auto;
+  border-radius: 2rem;
+  gap: 1rem;
+
+  grid-template-columns: 1fr;
+
+  @include responsiveLayout(2, 768px);
+
+  @include responsiveLayout(3, 1024px);
+
+  p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: $altColor;
+    grid-column: 1 / -1; 
+  }
+
+  label {
+    width: 100%;
+    input,
+    select {
+      @extend %style;
+    }
+  }
+
+  textarea {
+    @extend %style;
+    height: 10rem;
+    grid-column: 1 / -1; 
+    resize: none;
+  }
+
+  [type="submit"] {
+    width: 30%;
+    color: $primaryColor;
+    background-color: $altColor;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    transition-duration: 0.5s;
+    border: none;
+    grid-column: 1 / -1; 
+
+    &:hover {
+      background-color: $hoverAltColor;
+      color: $secondaryColor;
+    }
+  }
+}

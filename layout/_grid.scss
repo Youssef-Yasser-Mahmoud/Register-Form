@@ -1,0 +1,5 @@
+@mixin responsiveLayout($columns, $breakpoint) {
+  @media (min-width: $breakpoint) {
+    grid-template-columns: repeat($columns, 1fr);
+  }
+}
